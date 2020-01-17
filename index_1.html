@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <link rel="Bookmark" href="favicon.ico">
+    <title>rijn</title>
+    <meta name="description" content="rijn" />
+    <meta name="keywords" content="rijn" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="row-container">
+      <div class="menu-countainer">
+        <a class="menu-item level-1" href="http://blog.rijnx.com/">
+          <span class="title">Blog</span>
+          <span class="triangle"></span>
+        </a>
+        <a class="menu-item level-2" href="https://rijn.github.io/Notes/">
+          <span class="title">Notebook</span>
+          <span class="triangle"></span>
+        </a>
+        <a class="menu-item level-3" href="http://blog.rijnx.com/files/cv.pdf">
+          <span class="title">CV</span>
+          <span class="triangle"></span>
+        </a>
+        <a class="menu-item level-4" href="https://github.com/rijn/">
+          <span class="title">Github</span>
+          <span class="triangle"></span>
+        </a>
+        <span id="lodash" class="lodash"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=0&id=32575874&auto=1&height=450"></iframe>
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/87gWaABqGYs?autoplay=1" frameborder="0" allowfullscreen></iframe>-->
+<!--<embed src="http://player.yinyuetai.com/video/player/2854604/v_0.swf" quality="high" width="480" height="334" align="middle"  allowScriptAccess="sameDomain" allowfullscreen="true" type="application/x-shockwave-flash"></embed>-->
+<div class="inner cover">
+
+  <p class="cover-heading"><a id="hex">hex</a> </p>
+</div>
+  <footer>
+    <div class="copyright">
+      <p>&copy;&nbsp;Rijn, 2018.</p>
+      <p><a href="http://www.miitbeian.gov.cn/">苏ICP备15003700号</a></p>
+    </div>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-88944252-1', 'auto');
+    ga('send', 'pageview');
+
+    var lodashActive = false;
+    setInterval(function () {
+      lodashActive = !lodashActive;
+      document.getElementById('lodash').className = 'lodash ' + (lodashActive ? 'active' : '');
+    }, 500);
+  </script>
+  <script>
+    var d, h, m, s, color;
+  function displayTime() {
+    d = new Date(); //new data object
+    h = d.getHours();
+    m = d.getMinutes();
+    s = d.getSeconds();
+
+    //add zero to the left of the numbers if they are single digits
+    if(h <= 9) h = '0'+h;
+    if(m <= 9) m = '0'+m;
+    if(s <= 9) s = '0'+s;
+
+    color = "#"+h+m+s;
+    //set background color
+    document.body.style.background = color;
+    //set time
+    document.getElementById("hex").innerHTML = "time&color:  <h1>" + color + "</h1>";
+
+    //retrigger the function every second
+     setTimeout(displayTime, 1000);
+  }
+  displayTime();
+  </script>
+</body>
+
+</html>
